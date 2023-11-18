@@ -1,0 +1,2 @@
+#!/bin/sh
+Xorg -dpi 96 -noreset -nolisten tcp +extension GLX +extension RENDER -config xorg.conf -verbose :10
