@@ -50,6 +50,7 @@ async function createWindow() {
     );
   } catch (err) {
     console.log(err);
+    app.exit(1);
   }
 }
 
@@ -70,11 +71,11 @@ app.on("activate", () => {
 app.on("child-process-gone", (error, details) => {
   console.log(JSON.stringify(error));
   console.log(JSON.stringify(details));
-  app.quit();
+  app.exit(1);
 });
 
 app.on("render-process-gone", (error, _, details) => {
   console.log(JSON.stringify(error));
   console.log(JSON.stringify(details));
-  app.quit();
+  app.exit(1);
 });
