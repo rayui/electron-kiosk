@@ -50,6 +50,7 @@ async function createWindow() {
     );
   } catch (err) {
     console.log(err);
+    app.exit(1);
   }
 }
 
